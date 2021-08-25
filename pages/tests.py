@@ -16,6 +16,11 @@ class HomePageTests(SimpleTestCase):
         self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "home.html")
 
+    def test_view_uses_base_template(self):
+        response = self.client.get(reverse("home"))
+        self.assertEqual(response.status_code, 200)
+        self.assertTemplateUsed(response, "home.html")
+
 class SignupPageTests(TestCase):
     username = "newuser"
     email = "newuser@gmail.com"
@@ -30,6 +35,11 @@ class SignupPageTests(TestCase):
     
     def test_view_uses_correct_template(self):
         response = self.client.get(reverse("signup"))
+        self.assertTemplateUsed(response, "registration/signup.html")
+    
+    def test_view_uses_base_template(self):
+        response = self.client.get(reverse("signup"))
+        self.assertEqual(response.status_code, 200)
         self.assertTemplateUsed(response, "registration/signup.html")
 
     def test_signup_form(self):
