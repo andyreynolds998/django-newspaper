@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}Article List{% endblock title%}
+
+{% block content %}
+<h2>Breaking news! Read all about it!</h2>
+<ul>
+    {% for article in article_list %}
+    <a href='{% url "article_detail" article.pk %}'><li>{{ article.title }}</li></a>
+    {% endfor %}
+</ul>
+{% endblock content %}

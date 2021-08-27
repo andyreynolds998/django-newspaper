@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block title %}update your article{% endblock title%}
+
+{% block content %}
+<h2>Update your article</h2>
+<form method="POST">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button class="btn btn-dark" type="Update">update article</button>
+</form>
+{% endblock content %}
