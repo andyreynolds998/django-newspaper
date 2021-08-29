@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,8 +46,15 @@
                 </a>
 
                 <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <li><a class="dropdown-item" href="{% url 'password_change' %}">Change password</a></li>
-                    <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+                    <li><a class="dropdown-item" href="{% url 'article_create' %}">
+                        Create Article
+                    </a></li>
+                    <li><a class="dropdown-item" href="{% url 'password_change' %}">
+                        Change password
+                    </a></li>
+                    <li><a class="dropdown-item" href="{% url 'logout' %}">
+                        Logout
+                    </a></li>
                 </ul>
 
                 {% else %}
