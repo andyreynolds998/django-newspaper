@@ -1,0 +1,13 @@
+as a student i would like to be able to interact with all things related to my class
+
+acceptance criteria:
+-view grades
+-view class schedule
+-find links to study materials
+-see what assignments are due, and when theyre due, and when to turn them in
+
+as a teacher, id like to see my students progress in their online classes
+-submit graded projects to student portals
+-create/update assignment information
+-assign extra credit for going above the standard
+- 
